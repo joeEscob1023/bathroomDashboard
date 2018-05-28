@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {HashRouter, Route} from 'react-router-dom';
+import {HashRouter, Switch, Route} from 'react-router-dom';
 import Navigation from './Components/Navigation';
 import Landing from './Components/Landing';
 import ToiletInfo from './Components/ToiletInfo';
@@ -12,22 +12,24 @@ class App extends Component {
    
     return (
       <HashRouter>
-      <div className="App">
-      <Navigation />
-      <Route 
-        exact path='/' 
-        render={(props) => <Landing {...props} data={data} />}
-        />
-        <Route 
-        path='/ToiletInfo' 
-        render={(props) => <ToiletInfo {...props} data={data} />}
-        />
-        <Route 
-        path='/Location' 
-        render={(props) => <Location {...props} data={data} />}
-        />
-        {/* // <Landing data={data}/> */}
-      </div>
+        <Switch>
+          <div className="App">
+          <Navigation />
+          <Route 
+            exact path='/' 
+            render={(props) => <Landing {...props} data={data} />}
+            />
+            <Route 
+            path='/ToiletInfo' 
+            render={(props) => <ToiletInfo {...props} data={data} />}
+            />
+            <Route 
+            path='/Location' 
+            render={(props) => <Location {...props} data={data} />}
+            />
+            {/* // <Landing data={data}/> */}
+          </div>
+        </Switch>
       </HashRouter>
     );
   }
