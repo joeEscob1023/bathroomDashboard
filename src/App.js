@@ -20,11 +20,11 @@ class App extends Component {
             render={(props) => <Landing {...props} data={data} />}
             />
             <Route 
-            path='/ToiletInfo' 
+            exact path='/ToiletInfo' 
             render={(props) => <ToiletInfo {...props} data={data} />}
             />
             <Route 
-            path='/Location' 
+            exact path='/Location' 
             render={(props) => <Location {...props} data={data} />}
             />
             {/* // <Landing data={data}/> */}
