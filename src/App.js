@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {HashRouter, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Navigation from './Components/Navigation';
 import Landing from './Components/Landing';
 import ToiletInfo from './Components/ToiletInfo';
@@ -11,7 +11,7 @@ class App extends Component {
   render() {
    
     return (
-      <HashRouter>
+      <Router>
         <Switch>
           <div className="App">
           <Navigation />
@@ -30,7 +30,7 @@ class App extends Component {
             {/* // <Landing data={data}/> */}
           </div>
         </Switch>
-      </HashRouter>
+      </Router>
     );
   }
 }
